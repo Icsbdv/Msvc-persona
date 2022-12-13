@@ -61,7 +61,7 @@
 	
 
 	<build>
-		<finalName>Msvc-persona-V1.0</finalName>
+		<finalName>msvcpersona-r1-bdv</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
