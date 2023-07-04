@@ -53,10 +53,6 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>com.github.ulisesbocchio</groupId>
 			<artifactId>jasypt-spring-boot-starter</artifactId>
 			<version>3.0.3</version>
@@ -66,7 +62,7 @@
 	
 
 	<build>
-		<finalName>msvcpersona-r2-bdv</finalName>
+		<finalName>msvcpersona</finalName>
 		<plugins>
 			<plugin>
 				<groupId>com.github.ulisesbocchio</groupId>
