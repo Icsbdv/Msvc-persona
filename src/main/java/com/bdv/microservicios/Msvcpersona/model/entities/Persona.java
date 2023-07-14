@@ -2,9 +2,11 @@ package com.bdv.microservicios.Msvcpersona.model.entities;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
-
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,32 +14,16 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@NamedStoredProcedureQueries({
-        @NamedStoredProcedureQuery(
-                name = "agregarPersona",
-                procedureName = "sp_PEOPLE",
-                parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "Accion", type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "sPersonaId", type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "sPersona", type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "sDireccion", type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "sUser", type = String.class),
-                })
-
-})
+@Table(name = "Persona")
 public class Persona implements Serializable {
-
     @Id
+    @Column(name = "Id_Persona")
     String personaid;
 
+    @Column(name = "Nombre")
+    String nombre;
 
-    String persona;
-
-
+    @Column(name = "Direccion")
     String direccion;
-
-
-    String user;
-
 
 }
